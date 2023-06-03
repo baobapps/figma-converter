@@ -5,21 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75f36169-d96f-4b36-87c4-546211d08402" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/figma-converter.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/index.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vitest.config.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/environments.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/figma/api.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/figma/converters/html.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/figma/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/types/figma.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/figma.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/string.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/figma.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/utils.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/All_Tests.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/__tests__/greeter.test.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/index.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tests/index.spec.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -54,39 +57,41 @@
     <option name="showLibraryContents" value="true" />
     <option name="showScratchesAndConsoles" value="false" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.laravel-idea.search-composer-json&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/mouctar/Projects/baobapps/figma-converter&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
-    &quot;prettier.import.notification.dismissed&quot;: &quot;true&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/mouctar/Projects/baobapps/figma-converter/node_modules/prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.tabs&quot;,
-    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/mouctar/Projects/baobapps/figma-converter/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.laravel-idea.search-composer-json": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/mouctar/Projects/baobapps/figma-converter",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "yarn",
+    "prettier.import.notification.dismissed": "true",
+    "prettierjs.PrettierConfiguration.Package": "/Users/mouctar/Projects/baobapps/figma-converter/node_modules/prettier",
+    "settings.editor.selected.configurable": "editor.preferences.tabs",
+    "show.migrate.to.gradle.popup": "false",
+    "ts.external.directory.path": "/Users/mouctar/Projects/baobapps/figma-converter/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tests" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.build">
+  <component name="RunManager" selected="Vitest.file info.getFigmaFile &amp; SaveIt">
     <configuration name="All Tests" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
@@ -95,53 +100,64 @@
       <scope-kind value="ALL" />
       <method v="2" />
     </configuration>
-    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="build" />
-      </scripts>
+    <configuration name="file info" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
+      <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
+      <working-dir value="$PROJECT_DIR$" />
       <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/tests/figma.spec.ts" />
+      <test-names>
+        <test-name value="file info" />
+      </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="coverage" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="coverage" />
-      </scripts>
+    <configuration name="file info.getFigmaFile &amp; SaveIt" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
+      <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
+      <working-dir value="$PROJECT_DIR$" />
       <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/tests/figma.spec.ts" />
+      <test-names>
+        <test-name value="file info" />
+        <test-name value="getFigmaFile &amp; SaveIt" />
+      </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="lint" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="lint" />
-      </scripts>
+    <configuration name="file info.save Figma File" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
+      <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
+      <working-dir value="$PROJECT_DIR$" />
       <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/tests/figma.spec.ts" />
+      <test-names>
+        <test-name value="file info" />
+        <test-name value="save Figma File" />
+      </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="test" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="test" />
-      </scripts>
+    <configuration name="utils.write Json Ino Temp Directory" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
+      <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
+      <working-dir value="$PROJECT_DIR$" />
       <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/tests/utils.spec.ts" />
+      <test-names>
+        <test-name value="utils" />
+        <test-name value="write Json Ino Temp Directory" />
+      </test-names>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.build" />
-        <item itemvalue="npm.test" />
-        <item itemvalue="npm.lint" />
-        <item itemvalue="npm.coverage" />
+        <item itemvalue="Vitest.file info.getFigmaFile &amp; SaveIt" />
+        <item itemvalue="Vitest.utils.write Json Ino Temp Directory" />
         <item itemvalue="Vitest.All Tests" />
+        <item itemvalue="Vitest.file info" />
+        <item itemvalue="Vitest.file info.save Figma File" />
       </list>
     </recent_temporary>
   </component>
@@ -154,7 +170,7 @@
       <option name="presentableId" value="Default" />
       <updated>1685741774501</updated>
       <workItem from="1685741777107" duration="1325000" />
-      <workItem from="1685743251666" duration="93000" />
+      <workItem from="1685743251666" duration="14912000" />
     </task>
     <servers />
   </component>

@@ -1,11 +1,14 @@
 {
-  "name": "figma-converter",
+  "name": "@baobapps/figma-converter",
   "version": "1.0.0",
   "description": "Figma Converter into HTML/CSS, TAILWIND & FLUTTER",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "repository": "git@github.com:baobapps/figma-converter.git",
   "homepage": "https://baobapps.io",
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com"
+  },
   "bugs": {
     "email": "mouctar@baobapps.io",
     "url": "baobapps.io"
@@ -33,5 +36,10 @@
     "tslint-config-prettier": "^1.18.0",
     "typescript": "^5.1.3",
     "vitest": "^0.31.4"
+  },
+  "dependencies": {
+    "axios": "^1.4.0",
+    "dotenv": "^16.1.3",
+    "jsdom": "^22.1.0"
   }
 }

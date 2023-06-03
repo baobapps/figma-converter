@@ -1,5 +1,5 @@
-export const figmaToStandardHtmlCss = (): string => 'here is your html';
+import './environments';
 
-export const figmaToHtmlTailwindCss = (): string => 'here is your html with tailwind css';
-
-export const figmaToFlutter = (): string => 'here is your flutter code';
+export default () => {
+  return 'Hello World!' + process.env.MY_SECRET;
+};
