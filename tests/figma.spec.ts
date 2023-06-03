@@ -3,7 +3,7 @@ import '../src/environments';
 import { describe, expect, test } from 'vitest';
 import { getMe } from '../src/figma';
 import { getCachedFigmaFile, writeContentInoTempDirectory } from '../src/utils/figma';
-import { convertFigmaFrameIntoHtml } from '../src/figma/converters/html';
+import { convertFigmaFrameIntoHtml } from '../src/figma/html';
 import { stringIntoSnakeCase } from '../src/utils/string';
 
 describe.concurrent('user info', () => {

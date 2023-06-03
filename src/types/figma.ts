@@ -32,87 +32,14 @@ interface Frame {
   children: SceneNode[];
   absoluteBoundingBox: AbsoluteBoundingBox;
   constraints: Constraints;
-  styles: {
-    fill: string;
-    stroke: string;
-    strokeWeight: number;
-    strokeAlign: 'INSIDE' | 'OUTSIDE' | 'CENTER';
-    cornerRadius: number;
-    dashPattern: number[];
-    endArrowhead: 'NONE' | 'OPEN_ARROW' | 'FILLED_ARROW' | 'LINE';
-    startArrowhead: 'NONE' | 'OPEN_ARROW' | 'FILLED_ARROW' | 'LINE';
-    cornerSmoothing: number;
-    fontName: {
-      family: string;
-      style: string;
-    };
-    fontSize: number;
-    letterSpacing: number;
-    lineHeight: number;
-    paragraphIndent: number;
-    paragraphSpacing: number;
-    textCase: 'ORIGINAL' | 'UPPER' | 'LOWER' | 'TITLE';
-    textDecoration: 'NONE' | 'UNDERLINE' | 'STRIKETHROUGH';
-    textAlignHorizontal: 'LEFT' | 'RIGHT' | 'CENTER' | 'JUSTIFIED';
-    textAlignVertical: 'TOP' | 'CENTER' | 'BOTTOM';
-    textAutoResize: 'NONE' | 'WIDTH_AND_HEIGHT' | 'HEIGHT';
-    opacity: number;
-    blendMode:
-      | 'PASS_THROUGH'
-      | 'NORMAL'
-      | 'DARKEN'
-      | 'MULTIPLY'
-      | 'LINEAR_BURN'
-      | 'COLOR_BURN'
-      | 'LIGHTEN'
-      | 'SCREEN'
-      | 'LINEAR_DODGE'
-      | 'COLOR_DODGE'
-      | 'OVERLAY'
-      | 'SOFT_LIGHT'
-      | 'HARD_LIGHT'
-      | 'DIFFERENCE'
-      | 'EXCLUSION'
-      | 'HUE'
-      | 'SATURATION'
-      | 'COLOR'
-      | 'LUMINOSITY';
-    effects: {
-      type: 'INNER_SHADOW' | 'DROP_SHADOW' | 'LAYER_BLUR' | 'BACKGROUND_BLUR';
-      visible: boolean;
-      radius: number;
-      color: {
-        r: number;
-        g: number;
-        b: number;
-        a: number;
-      };
-      blendMode:
-        | 'PASS_THROUGH'
-        | 'NORMAL'
-        | 'DARKEN'
-        | 'MULTIPLY'
-        | 'LINEAR_BURN'
-        | 'COLOR_BURN'
-        | 'LIGHTEN'
-        | 'SCREEN'
-        | 'LINEAR_DODGE'
-        | 'COLOR_DODGE'
-        | 'OVERLAY'
-        | 'SOFT_LIGHT'
-        | 'HARD_LIGHT'
-        | 'DIFFERENCE'
-        | 'EXCLUSION'
-        | 'HUE'
-        | 'SATURATION'
-        | 'COLOR'
-        | 'LUMINOSITY';
-      offset: {
-        x: number;
-        y: number;
-      };
-    };
-  };
+  clipsContent: boolean;
+  background: Paint[];
+  fills: Paint[];
+  strokes: Paint[];
+  strokeWeight: number;
+  strokeAlign: 'INSIDE' | 'OUTSIDE' | 'CENTER';
+  backgroundColor: Color;
+  effects: Effect[];
 }
 
 interface SceneNode {
@@ -146,8 +73,6 @@ interface GradientStop {
 }
 
 interface VectorNode extends SceneNode {
-  absoluteBoundingBox: BoundingBox;
-  constraints: Constraints;
   fills: Paint[];
   strokes: Paint[];
   strokeWeight: number;
@@ -211,21 +136,6 @@ interface TextNode extends SceneNode {
   layoutAlign: 'MIN' | 'CENTER' | 'MAX' | 'STRETCH';
 }
 
-interface Style {
-  fontFamily: string;
-  fontPostScriptName: string;
-  fontWeight: number;
-  fontSize: number;
-  textAlignHorizontal: 'LEFT' | 'RIGHT' | 'CENTER' | 'JUSTIFIED';
-  textAlignVertical: 'TOP' | 'CENTER' | 'BOTTOM';
-  letterSpacing: number;
-  lineHeightPx: number;
-  lineHeightPercent: number;
-  lineHeightUnit: 'PIXELS' | 'FONT_SIZE_%';
-  lineHeightPercentFontSize: number;
-  textColor?: Color;
-}
-
 interface LineHeight {
   value: number;
   unit: 'PIXELS' | 'FONT_SIZE_%';
@@ -242,6 +152,7 @@ interface RectangleNode extends SceneNode {
   strokeAlign: 'INSIDE' | 'OUTSIDE' | 'CENTER';
   styles: { [key: string]: string };
   effects: Effect[];
+  backgroundColor: Color;
 }
 
 interface BoundingBox {
@@ -292,6 +203,18 @@ interface Style {
   name: string;
   styleType: 'FILL' | 'TEXT' | 'EFFECT' | 'GRID';
   description: string;
+  fontFamily: string;
+  fontPostScriptName: string;
+  fontWeight: number;
+  fontSize: number;
+  textAlignHorizontal: 'LEFT' | 'RIGHT' | 'CENTER' | 'JUSTIFIED';
+  textAlignVertical: 'TOP' | 'CENTER' | 'BOTTOM';
+  letterSpacing: number;
+  lineHeightPx: number;
+  lineHeightPercent: number;
+  lineHeightUnit: 'PIXELS' | 'FONT_SIZE_%';
+  lineHeightPercentFontSize: number;
+  textColor?: Color;
 }
 
 export type {

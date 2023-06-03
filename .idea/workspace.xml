@@ -4,25 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="75f36169-d96f-4b36-87c4-546211d08402" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/environments.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/figma/api.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/figma/converters/html.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/figma/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/figma.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/figma.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/string.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/figma.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/utils.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tmp/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="75f36169-d96f-4b36-87c4-546211d08402" name="Changes" comment="basic figma files i/o">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/index.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tests/index.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/figma/converters/html.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/figma/html.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/figma.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/figma.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/figma.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tests/figma.spec.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,6 +28,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -67,7 +59,7 @@
     "RunOnceActivity.laravel-idea.search-composer-json": "true",
     "WebServerToolWindowFactoryState": "false",
     "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "develop",
     "last_opened_file_path": "/Users/mouctar/Projects/baobapps/figma-converter",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -87,6 +79,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/figma" />
       <recent name="$PROJECT_DIR$/tests" />
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -170,11 +163,23 @@
       <option name="presentableId" value="Default" />
       <updated>1685741774501</updated>
       <workItem from="1685741777107" duration="1325000" />
-      <workItem from="1685743251666" duration="14912000" />
+      <workItem from="1685743251666" duration="21445000" />
     </task>
+    <task id="LOCAL-00001" summary="basic figma files i/o">
+      <created>1685783258209</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1685783258209</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="basic figma files i/o" />
+    <option name="LAST_COMMIT_MESSAGE" value="basic figma files i/o" />
   </component>
 </project>
